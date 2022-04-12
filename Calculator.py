@@ -1,21 +1,3 @@
-"""
-Program: Simple Calculator 
-Author: Hananee Bueraheng
-Simple calculator help the user calculate the basic 4 operations including:
-addition, subtraction, multiplication and division
-Significant constants
-         there is no constants
- 2. The inputs are
-         2 numbers (at least)
- 3. Computations:
-         addition: number + another number
-         subtraction: number - another number
-         multiplication: number * another number
-         division: number / another number
- 4. The outputs are
-         computation result
-"""
-
 import sys
 
 result = 0
@@ -26,32 +8,32 @@ new_num = 0
 def Num1 ():
     global num_1
     try:
-        num_1 = float(input('Put your first number : '))
+        num_1 = float(input('Enter your first number : '))
 
     except ValueError :
-        print('you must enter a number!!')
+        print('Invalid input, you must enter a number!!')
         Num1()
 
 def Num2():
     global num_2
     try:
-        num_2 = float(input('Put your second number : '))
+        num_2 = float(input('Enter your second number : '))
     except ValueError :
-            print('you must enter a number!!')
+            print('Invalid input, you must enter a number!!')
             Num2 ()
 
 def NewNum ():
     global new_num
     try:
-        new_num = float(input('Put new number that your want to calculates : '))
+        new_num = float(input('Enter new number that your want to calculates : '))
     
     except ValueError :
-            print('you must enter a number!!')
+            print('Invalid input, you must enter a number!!')
             NewNum ()
  
 def Oprt():
     global result
-    operation = input("Select operator '+' , '-' , '*' , '/' : ")
+    operation = input("Choose operator that you want to perform '+' , '-' , '*' , '/' : ")
     if (operation == '+' or operation == '-' or operation == '*' or operation == '/'):
         if operation == '+':
             if result <= 0 :
